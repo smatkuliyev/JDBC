@@ -31,23 +31,23 @@ public class Jdbc2DDL {
 		 /*=======================================================================
 		  ORNEK1:isciler adinda bir tablo olusturunuz id int, 
 		  birim VARCHAR(10), maas int
-//		========================================================================*/ 
-	    String sorgu = "CREATE TABLE isciler"
-				 + " (id int primary key,"
-		         + " birim VARCHAR(10),"
-		         + " maas int)";
+		========================================================================*/ 
+//	    String sorgu = "CREATE TABLE isciler"
+//				 + " (id int primary key,"
+//		         + " birim VARCHAR(10),"
+//		         + " maas int)";
 	    
 	    
-	    //1.yöntem 
+//	    1.yöntem 
 	    
 //	    boolean s1=st.execute(sorgu);	    
 //	    System.out.println("isciler tablosu oluşturuldu" +s1);
 	    
-	 // execute() metodu DDL komutlarinda hep false deger dondurdugu icin 
-	 // donus degerine bakmak gerekli degildir. Zaten komutun calismasi ile 
-	 // ilgili bir sorun var ise SQL EXception olusacaktir.
+//	  execute() metodu DDL komutlarinda hep false deger dondurdugu icin 
+//	  donus degerine bakmak gerekli degildir. Zaten komutun calismasi ile 
+//	  ilgili bir sorun var ise SQL EXception olusacaktir.
 	    
-	    //2.yöntem - olusturma
+//	    2.yöntem - olusturma
 	    
 //	   st.execute(sorgu);
 //	   System.out.println("isciler tablosu oluşturuldu");
@@ -55,19 +55,19 @@ public class Jdbc2DDL {
 	    /*======================================================================
 		  ORNEK2:isciler tablosunu siliniz 		
 		========================================================================*/
-	//	st.execute("drop table isciler");
-	//	System.out.println("isciler tablosu silindi");
+//		st.execute("drop table isciler");
+//		System.out.println("isciler tablosu silindi");
 		
 		
 		/*=======================================================================
 		  ORNEK3:isciler tablosuna yeni bir sutun {isim Varchar(20)} ekleyiniz.   
 		========================================================================*/
-	//	st.execute(" ALTER TABLE isciler ADD isim varchar(20) ");
-	//	System.out.println("sutun eklendi");
-		
-	//	 st.execute("alter table isciler ADD  isim varchar(20)");
-		    
-	//	    System.out.println("sütun eklendi");
+//		st.execute(" ALTER TABLE isciler ADD isim varchar(20) ");
+//		System.out.println("sutun eklendi");
+//		
+//		 st.execute("alter table isciler ADD  isim varchar(20)");
+//		    
+//		    System.out.println("sütun eklendi");
 		    
 		    
 		    /*=======================================================================
@@ -100,6 +100,9 @@ public class Jdbc2DDL {
 			st.execute(dropQuery2);
 		
 			System.out.println("calisanlar tablosu silindi..");
+			
+			con.close();
+			st.close();
 		    
 	}
 }
